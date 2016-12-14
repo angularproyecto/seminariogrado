@@ -1,0 +1,122 @@
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ <div class="row #e8f5e9 green lighten-5" >
+   <div class="col s6">
+     <h4>Alquiler Canchas</h4>
+    <form class="col s12"  #formAlquierCan="ngForm" novalidate >
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Ingrese el numero de canchas" 
+          id="numcanchas" 
+          type="text" 
+          class="validate"
+          [class.invalid]="!numcanchasTxt.valid"
+            name="numcanchas"
+            #numcanchasTxt="ngModel"
+            [(ngModel)]="canchaACrear.numcanchas"
+            required>
+          <label for="numcanchas"
+          data-error="El numero de canchas es requerida" 
+          data-success="listo">Numero de canchas</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="fecha" 
+          type="text" 
+          class="validate"
+          [class.invalid]="!fechaTxt.valid"
+            name="fecha"
+            #fechaTxt="ngModel"
+            [(ngModel)]="canchaACrear.fecha"
+            required>
+          <label for="fecha"
+          data-error="La fecha es requerida" 
+          data-success="listo">Fecha</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="hora" 
+          type="text" 
+          class="validate"
+          [class.invalid]="!horaTxt.valid"
+            name="hora"
+            #horaTxt="ngModel"
+            [(ngModel)]="canchaACrear.hora"
+            required>
+          <label for="hora"
+          data-error="La hora es requerida" 
+          data-success="listo">Hora</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="valor" 
+          type="text" 
+          class="validate"
+          [class.invalid]="!valorTxt.valid"
+            name="valor"
+            #valorTxt="ngModel"
+            [(ngModel)]="canchaACrear.valor"
+            required>
+          <label for="valor"
+          data-error="El valor es requerido" 
+          data-success="listo">Valor</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="nombrecliente" 
+          type="text" 
+          class="validate"
+          [class.invalid]="!nombreclienteTxt.valid"
+            name="nombrecliente"
+            #nombreclienteTxt="ngModel"
+            [(ngModel)]="canchaACrear.nombrecliente"
+            required>
+          <label for="nombrecliente"
+          data-error="El nombre del cliente es requerido" 
+          data-success="listo">Nombre Cliente</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s10">
+          <br/>
+          <button class="btn waves-effect waves-light" 
+                  type="submit" 
+                  name="action"
+                  [disabled]="!formAlquierCan.valid"
+                  (click)="guardarAlquiler()">
+            Guardar
+            <i class="material-icons right">send</i>            
+          </button>
+        </div>
+     </div>
+
+    </form>
+  </div>
+  <div class="col s6">
+     <div class="row">
+        <div class="col s12 m10">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/img/cancha.jpg" height="500">
+              <span class="card-title">MARCHAGAS</span>
+            </div>
+            <div class="card-content">
+              <p>Marchagas es un centro deportivo donde se realizan prestamos de canchas y torneos de futbol. </p>
+            </div>
+            <div class="card-action">
+              <a href="#!">Alquiler de canchas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+        
+     
+      
+      
+    
+          

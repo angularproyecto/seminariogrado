@@ -1,3 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+ <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <nav>
+    <div class="nav-wrapper #4caf50 green">
+      <a href="#!" class="brand-logo center">MarchaGAS</a>
+      <ul class="left hide-on-med-and-down">
+        <li (click)="listarAlquiler()">
+          <a class="waves-effect waves-light btn #78909c blue-grey lighten-1">Listar Alquileres</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="collection" id="Alquileres">
+    <li class="collection-item avatar" *ngFor="let sinteticos2 of alquilerList">
+      <img src="assets/img/marchagas.jpg" alt="" class="circle">
+      <span class="title">Nombre del cliente: {{sinteticos2.nombrecliente}}</span>
+      <p>Fecha de alquiler: {{sinteticos2.fecha}}<br>
+         Hora del arquiler:{{sinteticos2.hora}}<br>
+         Cantidad de canchas: {{sinteticos2.numcanchas}}<br>
+         valor del alquiler:{{sinteticos2.valor}}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
+         
+
+
+
+    <div class="col s12 m8 l10"> <!-- Note that "m8 l9" was added -->
+      <sinteticos>
+      </sinteticos>
+    </div>
